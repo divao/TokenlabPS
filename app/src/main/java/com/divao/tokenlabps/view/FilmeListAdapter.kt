@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.divao.tokenlabps.R
 import com.divao.tokenlabps.model.Filme
+import com.divao.tokenlabps.util.getProgressDrawable
+import com.divao.tokenlabps.util.loadImage
 import kotlinx.android.synthetic.main.item_filme.view.*
 
 class FilmeListAdapter(var filmes: ArrayList<Filme>): RecyclerView.Adapter<FilmeListAdapter.FilmeViewHolder>() {
@@ -28,10 +30,13 @@ class FilmeListAdapter(var filmes: ArrayList<Filme>): RecyclerView.Adapter<Filme
 
     class FilmeViewHolder(view: View): RecyclerView.ViewHolder(view){
 
+        private val imageView = view.imageView
         private val filmeTitulo = view.titulo
+        private val progressDrawable = getProgressDrawable(view.context)
 
         fun bind(filme: Filme) {
             filmeTitulo.text = filme.filmeTitulo
+            imageView.loadImage(filme.filmePoster, progressDrawable)
         }
 
     }
