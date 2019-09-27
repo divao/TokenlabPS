@@ -34,7 +34,9 @@ class MainActivity : AppCompatActivity() {
 
     fun observeViewModel() {
         viewModel.filmes.observe(this, Observer {filmes :List<Filme>? ->
-            filmes?.let { filmesAdapter.updateFilmes(it) }
+            filmes?.let {
+                filmesList.visibility = View.VISIBLE
+                filmesAdapter.updateFilmes(it) }
         })
         viewModel.filmeLoadError.observe(this, Observer { isError :Boolean? ->
             isError?.let { list_error.visibility = if(it) View.VISIBLE else View.GONE }
