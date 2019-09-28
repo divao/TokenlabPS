@@ -23,4 +23,8 @@ class FilmesService {
         return api.getFilmes()
     }
 
+    fun getUnicoFilme(idFilme: String): Single<UnicoFilme> {
+        return api.getUnicoFilme(idFilme)
+    }
+
 }

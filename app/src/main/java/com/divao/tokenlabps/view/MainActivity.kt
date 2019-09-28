@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     lateinit var viewModel: ListViewModel
-    private val filmesAdapter = FilmeListAdapter(arrayListOf())
+    private val filmesAdapter = FilmeListAdapter(this, arrayListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
