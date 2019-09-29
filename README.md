@@ -20,4 +20,9 @@ O desafio consiste em elaborar um aplicativo (Android ou iOS) que obtenha os dad
 * Para obter a listagem dos filmes, basta realizar uma requisição HTTP utilizando o método GET no seguinte endpoint: https://desafio-mobile.nyc3.digitaloceanspaces.com/movies
 * Para obter informações detalhadas de um determinado filme, basta adicionar o ID do mesmo ao final do endpoint anterior. Então se quisermos, por exemplo, obter os detalhes do filme de ID 240, basta realizar um GET no seguinte endpoint: https://desafio-mobile.nyc3.digitaloceanspaces.com/movies/240
 
+## Referências
+
+1. "Modern Android app using Kotlin, MVVM, Dagger2, RxJava &more" - https://www.udemy.com/course/modernandroid/
+2. "Recyclerview + Cardview with GridLayout | Android studio tutorial" - https://www.youtube.com/watch?v=SD2t75T5RdY
+
 
