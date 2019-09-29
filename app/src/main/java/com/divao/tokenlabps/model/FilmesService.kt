@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class FilmesService {
+class FilmesService() {
 
     private val BASE_URL = "https://desafio-mobile.nyc3.digitaloceanspaces.com"
     private val api: FilmesApi
@@ -26,5 +26,6 @@ class FilmesService {
     fun getUnicoFilme(idFilme: String): Single<UnicoFilme> {
         return api.getUnicoFilme(idFilme)
     }
+
 
 }
