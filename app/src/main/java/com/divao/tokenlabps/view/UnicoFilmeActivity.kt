@@ -17,7 +17,8 @@ import com.divao.tokenlabps.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_unico_filme.*
 import android.support.v4.app.NotificationCompat.getExtras
-
+import android.view.Menu
+import android.view.MenuItem
 
 
 class UnicoFilmeActivity() : AppCompatActivity() {
@@ -28,6 +29,10 @@ class UnicoFilmeActivity() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_unico_filme)
+
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         var idFilme = intent.extras.getString("idFilme")
 
@@ -60,5 +65,19 @@ class UnicoFilmeActivity() : AppCompatActivity() {
                 }
             }
         })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        return true
     }
 }
